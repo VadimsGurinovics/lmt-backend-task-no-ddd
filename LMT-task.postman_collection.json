@@ -1,0 +1,607 @@
+{
+	"info": {
+		"_postman_id": "4961f48d-98d0-44b9-90ac-87fe5fb58d66",
+		"name": "LMT-task",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "15302105"
+	},
+	"item": [
+		{
+			"name": "product-sets",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{domain}}/api/product-sets",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"product-sets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "product-sets 200",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/product-sets",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"product-sets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": [\n        {\n            \"id\": 1,\n            \"name\": \"Updated Product Set\",\n            \"slug\": \"updated-product-set\",\n            \"products\": [\n                {\n                    \"id\": 1,\n                    \"sku\": \"SKU123-1\",\n                    \"name\": \"Updated Product example\",\n                    \"slug\": \"updated-product-example\",\n                    \"type\": \"device\",\n                    \"condition\": \"new\",\n                    \"description_title\": \"Title-1\",\n                    \"description_text\": \"Description-1\",\n                    \"price\": \"199.99\",\n                    \"published\": 1\n                },\n                {\n                    \"id\": 2,\n                    \"sku\": \"SKU123-2\",\n                    \"name\": \"Product 2\",\n                    \"slug\": \"product-2\",\n                    \"type\": \"service\",\n                    \"condition\": \"used\",\n                    \"description_title\": \"Title-2\",\n                    \"description_text\": \"Description-2\",\n                    \"price\": \"99.99\",\n                    \"published\": 0\n                },\n                {\n                    \"id\": 3,\n                    \"sku\": \"SKU123-3\",\n                    \"name\": \"Product 3\",\n                    \"slug\": \"product-3\",\n                    \"type\": \"device\",\n                    \"condition\": \"new\",\n                    \"description_title\": \"This is a sample product\",\n                    \"description_text\": \"Description-3\",\n                    \"price\": \"199.99\",\n                    \"published\": 1\n                }\n            ]\n        }\n    ]\n}"
+				},
+				{
+					"name": "product-sets",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "{{domain}}/api/product-sets",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"product-sets"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": []\n}"
+				}
+			]
+		},
+		{
+			"name": "product-sets",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"New Product Set\",\n    \"products\": [\n        {\n            \"name\": \"Product 1\",\n            \"sku\": \"SKU123-1\",\n            \"type\": \"device\",\n            \"condition\": \"new\",\n            \"description_title\": \"Title\",\n            \"description_text\": \"Description\",\n            \"price\": 99.99,\n            \"wholesale_price\": 79.99,\n            \"published\": true\n        },\n        {\n            \"name\": \"Product 2\",\n            \"sku\": \"SKU123-2\",\n            \"type\": \"service\",\n            \"condition\": \"used\",\n            \"description_title\": \"Title-2\",\n            \"description_text\": \"Description-2\",\n            \"price\": 99.99,\n            \"wholesale_price\": 79.99,\n            \"published\": false\n        }\n    ]\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/product-sets",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"product-sets"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "product-sets OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"New Product Set\",\n    \"products\": [\n        {\n            \"name\": \"Product 1\",\n            \"sku\": \"SKU123-1\",\n            \"type\": \"device\",\n            \"condition\": \"new\",\n            \"description_title\": \"Title\",\n            \"description_text\": \"Description\",\n            \"price\": 99.99,\n            \"wholesale_price\": 79.99,\n            \"published\": true\n        },\n        {\n            \"name\": \"Product 2\",\n            \"sku\": \"SKU123-2\",\n            \"type\": \"service\",\n            \"condition\": \"used\",\n            \"description_title\": \"Title-2\",\n            \"description_text\": \"Description-2\",\n            \"price\": 99.99,\n            \"wholesale_price\": 79.99,\n            \"published\": false\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/product-sets",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"product-sets"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"New Product Set\",\n        \"slug\": \"new-product-set\",\n        \"products\": [\n            {\n                \"id\": 1,\n                \"sku\": \"SKU123-1\",\n                \"name\": \"Product 1\",\n                \"slug\": \"product-1\",\n                \"type\": \"device\",\n                \"condition\": \"new\",\n                \"description_title\": \"Title\",\n                \"description_text\": \"Description\",\n                \"price\": \"99.99\",\n                \"published\": 1\n            },\n            {\n                \"id\": 2,\n                \"sku\": \"SKU123-2\",\n                \"name\": \"Product 2\",\n                \"slug\": \"product-2\",\n                \"type\": \"service\",\n                \"condition\": \"used\",\n                \"description_title\": \"Title-2\",\n                \"description_text\": \"Description-2\",\n                \"price\": \"99.99\",\n                \"published\": 0\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "product-sets ERROR",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"New Product Set\",\n    \"products\": [\n        {\n            \"name\": \"Product 1\",\n            \"sku\": \"SKU123-1\",\n            \"type\": \"device\",\n            \"condition\": \"new\",\n            \"description_title\": \"Title\",\n            \"description_text\": \"Description\",\n            \"price\": 99.99,\n            \"wholesale_price\": 79.99,\n            \"published\": true\n        },\n        {\n            \"name\": \"Product 2\",\n            \"sku\": \"SKU123-2\",\n            \"type\": \"service\",\n            \"condition\": \"used\",\n            \"description_title\": \"Title-2\",\n            \"description_text\": \"Description-2\",\n            \"price\": 99.99,\n            \"wholesale_price\": 79.99,\n            \"published\": false\n        }\n    ]\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/product-sets",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"product-sets"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"error\": \"Validation failed\",\n    \"messages\": {\n        \"products.0.sku\": [\n            \"The products.0.sku has already been taken.\"\n        ],\n        \"products.1.sku\": [\n            \"The products.1.sku has already been taken.\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "product-sets/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"Updated Product Set\",\n    \"products\": [\n        {\n            \"id\": 1,\n            \"name\": \"Updated Product\",\n            \"sku\": \"SKU123-1-1\",\n            \"type\": \"device\",\n            \"condition\": \"new\",\n            \"description_title\": \"New Title\",\n            \"description_text\": \"New Description\",\n            \"price\": 109.99,\n            \"wholesale_price\": 89.99,\n            \"published\": true\n        }\n    ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/product-sets/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"product-sets",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "product-sets/{id} OK",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Product Set\",\n    \"products\": [\n        {\n            \"id\": 1,\n            \"name\": \"Updated Product\",\n            \"sku\": \"SKU123-1-1\",\n            \"type\": \"device\",\n            \"condition\": \"new\",\n            \"description_title\": \"New Title\",\n            \"description_text\": \"New Description\",\n            \"price\": 109.99,\n            \"wholesale_price\": 89.99,\n            \"published\": true\n        }\n    ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/product-sets/4",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"product-sets",
+								"4"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"name\": \"Updated Product Set\",\n        \"slug\": \"updated-product-set\",\n        \"products\": [\n            {\n                \"id\": 1,\n                \"sku\": \"SKU123-1-1\",\n                \"name\": \"Updated Product\",\n                \"slug\": \"updated-product\",\n                \"type\": \"device\",\n                \"condition\": \"new\",\n                \"description_title\": \"New Title\",\n                \"description_text\": \"New Description\",\n                \"price\": \"109.99\",\n                \"published\": 1\n            },\n            {\n                \"id\": 2,\n                \"sku\": \"SKU123-2\",\n                \"name\": \"Product 2\",\n                \"slug\": \"product-2\",\n                \"type\": \"service\",\n                \"condition\": \"used\",\n                \"description_title\": \"Title-2\",\n                \"description_text\": \"Description-2\",\n                \"price\": \"99.99\",\n                \"published\": 0\n            }\n        ]\n    }\n}"
+				},
+				{
+					"name": "product-sets/{id} ERROR",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"Updated Product Set\",\n    \"products\": [\n        {\n            \"id\": 11,\n            \"name\": \"Updated Product\",\n            \"sku\": \"SKU123-1-1\",\n            \"type\": \"device\",\n            \"condition\": \"new\",\n            \"description_title\": \"New Title\",\n            \"description_text\": \"New Description\",\n            \"price\": 109.99,\n            \"wholesale_price\": 89.99,\n            \"published\": true\n        }\n    ]\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/product-sets/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"product-sets",
+								"1"
+							]
+						}
+					},
+					"status": "Bad Request",
+					"code": 400,
+					"_postman_previewlanguage": null,
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"error\": \"The selected products.0.id is invalid.\"\n}"
+				}
+			]
+		},
+		{
+			"name": "products",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"product_set_id\": 1,\n    \"sku\": \"SKU123-3\",\n    \"name\": \"Product 3\",\n    \"type\": \"device\",\n    \"condition\": \"new\",\n    \"description_title\": \"This is a sample product\",\n    \"description_text\": \"Description-3\",\n    \"price\": 199.99,\n    \"wholesale_price\": 150.00,\n    \"published\": true\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/products",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"products"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "products OK",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_set_id\": 1,\n    \"sku\": \"SKU123-3\",\n    \"name\": \"Product 3\",\n    \"type\": \"device\",\n    \"condition\": \"new\",\n    \"description_title\": \"This is a sample product\",\n    \"description_text\": \"Description-3\",\n    \"price\": 199.99,\n    \"wholesale_price\": 150.00,\n    \"published\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/products",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Created",
+					"code": 201,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 3,\n        \"sku\": \"SKU123-3\",\n        \"name\": \"Product 3\",\n        \"slug\": \"product-3\",\n        \"type\": \"device\",\n        \"condition\": \"new\",\n        \"description_title\": \"This is a sample product\",\n        \"description_text\": \"Description-3\",\n        \"price\": 199.99,\n        \"published\": true\n    }\n}"
+				},
+				{
+					"name": "products",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"product_set_id\": 1,\n    \"sku\": \"SKU123-3\",\n    \"name\": \"Product 3\",\n    \"type\": \"device\",\n    \"condition\": \"new\",\n    \"description_title\": \"This is a sample product\",\n    \"description_text\": \"Description-3\",\n    \"price\": 199.99,\n    \"wholesale_price\": 150.00,\n    \"published\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/products",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"products"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"error\": \"Validation failed\",\n    \"messages\": {\n        \"product_set_id\": [\n            \"The selected product set id is invalid.\"\n        ],\n        \"sku\": [\n            \"The sku has already been taken.\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "products/{id}",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"sku\": \"SKU123-1\",\n    \"name\": \"Product 3\",\n    \"type\": \"device\",\n    \"condition\": \"new\",\n    \"description_title\": \"This is a sample product\",\n    \"description_text\": \"Description-3\",\n    \"price\": 199.99,\n    \"wholesale_price\": 150.00,\n    \"published\": true\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "{{domain}}/api/products/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "products/{id} OK",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sku\": \"SKU123-1\",\n    \"name\": \"Updated Product example\",\n    \"type\": \"device\",\n    \"condition\": \"new\",\n    \"description_title\": \"Title-1\",\n    \"description_text\": \"Description-1\",\n    \"price\": 199.99,\n    \"wholesale_price\": 150.00,\n    \"published\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/products/10",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"10"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"data\": {\n        \"id\": 1,\n        \"sku\": \"SKU123-1\",\n        \"name\": \"Updated Product example\",\n        \"slug\": \"updated-product-example\",\n        \"type\": \"device\",\n        \"condition\": \"new\",\n        \"description_title\": \"Title-1\",\n        \"description_text\": \"Description-1\",\n        \"price\": 199.99,\n        \"published\": true\n    }\n}"
+				},
+				{
+					"name": "products/{id} ERROR",
+					"originalRequest": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"sku\": \"SKU123-1\",\n    \"name\": \"Updated Product example\",\n    \"type\": \"device\",\n    \"condition\": \"new\",\n    \"description_title\": \"Title-1\",\n    \"description_text\": \"Description-1\",\n    \"price\": 199.99,\n    \"wholesale_price\": 150.00,\n    \"published\": true\n}\n",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{domain}}/api/products/10",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"10"
+							]
+						}
+					},
+					"status": "Unprocessable Entity (WebDAV) (RFC 4918)",
+					"code": 422,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"error\": \"Validation failed\",\n    \"messages\": {\n        \"sku\": [\n            \"The sku field must be a string.\"\n        ]\n    }\n}"
+				}
+			]
+		},
+		{
+			"name": "products/{id}",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "X-API-KEY",
+						"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{domain}}/api/products/1",
+					"host": [
+						"{{domain}}"
+					],
+					"path": [
+						"api",
+						"products",
+						"1"
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "products/{id} OK",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/products/1",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"1"
+							]
+						}
+					},
+					"status": "No Content",
+					"code": 204,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": ""
+				},
+				{
+					"name": "products/{id} ERROR",
+					"originalRequest": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "X-API-KEY",
+								"value": "hs8NuWQrBbjKjYhJqqNwOt0Irj3wiN0k",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "{{domain}}/api/products/13",
+							"host": [
+								"{{domain}}"
+							],
+							"path": [
+								"api",
+								"products",
+								"13"
+							]
+						}
+					},
+					"status": "Internal Server Error",
+					"code": 500,
+					"_postman_previewlanguage": "json",
+					"header": null,
+					"cookie": [],
+					"body": "{\n    \"error\": \"Something went wrong: No query results for model [App\\\\Models\\\\Product] 13\"\n}"
+				}
+			]
+		}
+	]
+}
