@@ -64,6 +64,7 @@ php artisan test
 ## Postman Collection
 
 For easier manual testing, a Postman collection has been included in the repository. You can import this collection into Postman and use it to test the available API endpoints.
+![Alt text](https://i.ibb.co/BPQ4DRG/Postman-LMT-collection.png)
 ```bash
 LMT-task.postman_collection.json
 ```
